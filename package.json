@@ -1,0 +1,37 @@
+{
+  "name": "diagnostics-pagelet",
+  "version": "1.0.0",
+  "description": "Default diagnostics Pagelet used by the 404 and 500 error Pagelets",
+  "main": "index.js",
+  "scripts": {
+    "test": "illuminati"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigpipe/diagnostics-pagelet.git"
+  },
+  "dependencies": {
+    "pagelet": "0.8.x"
+  },
+  "devDependencies": {
+    "illuminati": "0.0.x",
+    "assume": "0.0.x",
+    "coveralls": "2.11.x",
+    "istanbul": "0.3.x",
+    "mocha": "2.0.x",
+    "mocha-lcov-reporter": "0.0.x"
+  },
+  "keywords": [
+    "BigPipe",
+    "Pagelet",
+    "Diagnostics",
+    "404",
+    "500"
+  ],
+  "author": "Martijn Swaagman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigpipe/diagnostics-pagelet/issues"
+  },
+  "homepage": "https://github.com/bigpipe/diagnostics-pagelet"
+}
