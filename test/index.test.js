@@ -3,25 +3,36 @@ describe('Diagnostics Pagelet', function () {
 
   var Pagelet = require('pagelet')
     , Diagnostics = require('../')
+    , Route = require('routable')
+    , Temper = require('temper')
     , assume = require('assume')
-    , pagelet, P;
+    , pagelet;
 
   beforeEach(function () {
-    P = Diagnostics.extend({
-      view: 'fixtures/view.html'
-    });
-
-    pagelet = new P(new Pagelet);
+    pagelet = new Diagnostics;
   });
 
   afterEach(function each() {
     pagelet = null;
   });
 
-  it('has css reference', function () {
-    assume(pagelet.css).to.be.an('array');
-    assume(pagelet.css[0]).to.include('diagnostic.styl');
-    assume(pagelet.css[0]).to.equal(process.cwd() + '/diagnostic.styl');
-    assume(pagelet.css[0]).to.not.equal('diagnostic.styl');
+  it('is an extendible constructor', function () {
+    assume(Diagnostics.extend).to.be.a('function');
+    assume(pagelet).to.be.instanceof(Diagnostics);
+    assume(pagelet).to.be.instanceof(Pagelet);
+  });
+
+  it('has default values', function () {
+    assume(pagelet.name).to.equal('diagnostics');
+    assume(pagelet.css).to.equal('diagnostic.styl');
+    assume(pagelet.view).to.equal(process.cwd() + '/diagnostic.html');
+  });
+
+  it('can have a custom view', function () {
+    pagelet = new (Diagnostics.extend({
+      view: 'fixtures/view.html'
+    }).on(module))({ temper: new Temper });
+
+    assume(pagelet.view).to.equal(process.cwd() + '/test/fixtures/view.html');
   });
 });
