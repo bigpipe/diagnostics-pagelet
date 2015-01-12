@@ -35,27 +35,23 @@ issues, many of them.
 
 ### Example
 
-In this example the diagnostics Pagelet is extended with a custom view.
-[BigPipe] will automatically discover this extended version
-if it is provided to [BigPipe] alongside the other pagelets.
-Note that the enviroment variable can be overruled to manage the
-data that is displayed.
+In this example the diagnostics Pagelet is extended with a custom view, which
+in turn is provided to a custom 500 Pagelet. [BigPipe] will automatically
+discover this extended version of the 500 Pagelet if it is provided to [BigPipe]
+alongside the other pagelets.
 
 ```js
 'use strict';
 
 //
-// Extend the diagnostics Pagelet with a custom view.
+// Extend 500 Pagelet with custom Diagnostics Pagelet.
 //
-var Diagnostics = require('diagnostics-pagelet').extend({
-  view: '/path/to/my/custom-view.html'
-});
-
-//
-// Initialise BigPipe server.
-//
-var pipe = require('bigpipe').createServer(2000, {
-  pagelets: [ Diagnostics, ... ]
+var Fivehundred = require('500-pagelet').extend({
+  pagelets: {
+    diagnostics: require('diagnostics-pagelet').extend({
+      view: '/path/to/my/custom-view.html'
+    })
+  }
 });
 ```
 
