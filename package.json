@@ -1,6 +1,6 @@
 {
   "name": "diagnostics-pagelet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Default diagnostics Pagelet used by the 404 and 500 Pagelet",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "https://github.com/bigpipe/diagnostics-pagelet.git"
   },
   "dependencies": {
-    "pagelet": "1.0.x"
+    "pagelet": "1.0.0-alpha"
   },
   "devDependencies": {
     "assume": "0.0.x",
