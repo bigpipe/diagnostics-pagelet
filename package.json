@@ -1,6 +1,6 @@
 {
   "name": "diagnostics-pagelet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Default diagnostics Pagelet used by the 404 and 500 Pagelet",
   "main": "index.js",
   "scripts": {
@@ -14,15 +14,15 @@
     "url": "https://github.com/bigpipe/diagnostics-pagelet.git"
   },
   "dependencies": {
-    "pagelet": "1.0.0-alpha"
+    "pagelet": "1.0.0-alpha-3"
   },
   "devDependencies": {
-    "assume": "0.0.x",
+    "assume": "1.2.x",
     "istanbul": "0.3.x",
-    "mocha": "2.1.x",
-    "pre-commit": "0.0.x",
+    "mocha": "2.2.x",
+    "pre-commit": "1.0.x",
     "routable": "0.0.x",
-    "temper": "0.2.x"
+    "temper": "0.3.x"
   },
   "keywords": [
     "BigPipe",
