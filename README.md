@@ -9,7 +9,7 @@
 
 Default diagnostics Pagelet used by the diagnostics and 500 Pagelet.
 This Pagelet is responsible for displaying additional diagnostics. By
-default the diagnostics Pagelet is provided with [BigPipe]. However, if you
+default the diagnostics Pagelet is provided with BigPipe. However, if you
 need a custom diagnostics you can extend this Pagelet. For example to change
 the default view.
 
@@ -23,21 +23,15 @@ npm install --save diagnostics-pagelet
 
 ## Support
 
-Got stuck? Or can't wrap your head around a concept or just want some feedback,
-we got a dedicated IRC channel for that on Freenode:
-
-- **IRC Server**: `irc.freenode.net`
-- **IRC Room**: `#bigpipe`
-
-Still stuck? Create an issue. Every question you have is a bug in our
+Create an issue. Every question you have is a bug in our
 documentation and that should be corrected. So please, don't hesitate to create
 issues, many of them.
 
 ### Example
 
 In this example the diagnostics Pagelet is extended with a custom view, which
-in turn is provided to a custom 500 Pagelet. [BigPipe] will automatically
-discover this extended version of the 500 Pagelet if it is provided to [BigPipe]
+in turn is provided to a custom 500 Pagelet. BigPipe will automatically
+discover this extended version of the 500 Pagelet if it is provided to BigPipe
 alongside the other pagelets.
 
 ```js
@@ -83,7 +77,6 @@ npm run coverage
 
 diagnostics-pagelet is released under MIT.
 
-[BigPipe]: http://bigpipe.io/
 [Travis CI]: http://travisci.org
 [Temper]: http://github.com/bigpipe/temper
 [pre-commit]: http://github.com/observing/pre-commit
